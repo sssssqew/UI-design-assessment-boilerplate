@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; padding: 0;
+    width: 100%; height: 300vh;
+
+    background: url(https://blog.kakaocdn.net/dn/ciUuSF/btrwA63osUr/qK4zOZpkmz3A8U9rMtkzO1/img.jpg) no-repeat center;
+    background-size: cover;
+}
+.modal-container{
+    position: fixed; 
+    left: 0; top: 0; right: 0;
+    z-index: 1;
+    width: 100%; height: 100vh;
+
+    display: none;
+}
+.modal{
+    /* border: 1px solid red; */
+    width: 30%; height: 300px; min-width: 300px;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: transparent;
+    backdrop-filter: blur(17px);
+    color: wheat; font-size: .8rem; font-weight: 500;
+    padding: .5rem 1rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .3);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+}
+.modal header{
+    height: 40px; line-height: 40px;
+    width: 100%;
+    /* border: 1px solid red; */
+    text-align: center;
+    border-bottom: 1px solid wheat;
+}
+.modal .body{
+    flex: 1;
+    padding-top: 1rem;
+    /* border: 1px solid green; */
+}
+.modal footer{
+    border-top: 1px solid wheat;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: .5rem;
+}
+button{
+    border: none; outline: none;
+    padding: .3rem .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: wheat; color:rgba(0, 0, 0, .6);
+    font-size: .6rem; font-weight: 600;
+    margin-left: .3rem;
+}
+.modal-container.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+}
